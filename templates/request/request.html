@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Acceso a Vistas Django</title>
+    <style>
+        body {
+            font-family: sans-serif;
+            padding: 20px;
+        }
+        .grid-container {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr); /* 4 columnas */
+            gap: 10px; /* espacio entre botones */
+        }
+        .grid-container a {
+            text-decoration: none;
+        }
+        button {
+            width: 100%;
+            padding: 15px;
+            font-size: 16px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <h1>Acceder a rutas del proyecto</h1>
+
+    <div class="grid-container">
+        <a href="{% url 'request_page' %}"><button>Request Page</button></a>
+        <a href="{% url 'app-atributes' %}"><button>App Attributes</button></a>
+        <a href="{% url 'middleware' %}"><button>Middleware</button></a>
+        <a href="{% url 'querydict' %}"><button>QueryDict</button></a>
+        <a href="{% url 'is-secure' %}"><button>Is Secure</button></a>
+        <a href="{% url 'home' %}"><button>Home</button></a>
+        <a href="{% url 'response' %}"><button>Response</button></a>
+        <a href="{% url 'subclasses' %}"><button>Response Subclasses</button></a>
+        <a href="{% url 'json' %}"><button>JSON Response</button></a>
+        <a href="{% url 'streaming' %}"><button>Streaming Response</button></a>
+        <a href="{% url 'file' %}"><button>File Response</button></a>
+        <a href="{% url 'base' %}"><button>Base Response</button></a>
+    </div>
+
+</body>
+</html>
